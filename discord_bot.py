@@ -6,10 +6,9 @@ import sqlite3
 import time
 import os, sys
 
-
 # token key for logging the bot
-token = 'token here'
-userid = 'user id here'
+token = 'NTMyNTI2Mzg3Mzc1MTEyMTkz.DxkoMQ.CHHNecmGVrgXjMgz2Ll35D4Rt64'
+userid = 302083558267420684
 
 # creates alias instance of the sub-class discord.Bot()
 client = commands.Bot(command_prefix='$', pm_help=True)
@@ -71,8 +70,14 @@ async def logout(ctx):
 async def virus(ctx, virus):
     cur.execute(f'SELECT name, description FROM main WHERE name LIKE "%{virus}%"')
     rows = cur.fetchall()
-    for row in rows:
-        await ctx.message.channel.send(row)
+    for row, desc in rows:
+        row = str(row)
+        desc = str(desc)
+        desc = desc.strip("(',)")
+        row = row.strip("(',)")
+        embed = discord.Embed(title=row, description=desc, color=0x00ffbb)
+        embed.set_footer(text='Darwin, version 0.0.1')
+        await ctx.message.channel.send(embed = embed)
 
 # executes the discord.Bot() sub-class
 client.run(token)
