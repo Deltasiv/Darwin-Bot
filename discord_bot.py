@@ -8,7 +8,7 @@ import os, sys
 
 # token key for logging the bot
 token = 'token here'
-userid = 'id here'
+userid = 'user id here'
 
 # creates alias instance of the sub-class discord.Bot()
 client = commands.Bot(command_prefix='$', pm_help=True)
