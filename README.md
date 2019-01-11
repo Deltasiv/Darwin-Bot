@@ -59,6 +59,10 @@ After that activate the environment:
 ```bash
 source darwin-python-master/bin/activate
 ```
+And finally install discord.py:
+```bash
+python3 -m pip install -U https://github.com/Rapptz/discord.py/archive/async.zip#egg=discord.py[voice]
+```
 
 ### How To Use 
 
@@ -78,7 +82,6 @@ ownerid = 'your user id here'
 #### Prerequistites 
 
 You must have a Python interpreter that will run Python 3.7.1. If you don't have one [install from here](https://www.python.org/downloads/release/python-371/).
-Virtualenv automatically installs the needed libraries, [discord.py](https://discordpy.readthedocs.io/en/rewrite/).
 
 ## Usage 
 
