@@ -7,8 +7,8 @@ import time
 import os, sys
 
 # token key for logging the bot
-token = 'NTMyNTI2Mzg3Mzc1MTEyMTkz.DxkoMQ.CHHNecmGVrgXjMgz2Ll35D4Rt64'
-userid = 302083558267420684
+token = 'token here'
+userid = 'client id here'
 
 # creates alias instance of the sub-class discord.Bot()
 client = commands.Bot(command_prefix='$', pm_help=True)
@@ -59,7 +59,7 @@ async def purge(ctx, msgs):
 async def logout(ctx):
     # check if message.author.id is equal to entity.Hydra(x) id
     if ctx.message.author.id == userid:
-        print(f'{ctx.message.author}, Hydra closed connection!')
+        print(f'{ctx.message.author}, closed connection!')
         await client.logout()
     else:
         await ctx.message.channel.send(':no_entry_sign: You don\'t have permission to execute this command!')
